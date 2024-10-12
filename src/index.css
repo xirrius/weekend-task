@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #F9F7F2;
+}
+
+:root {
+  --bgDefault: #F9F7F2;
+  --primary: #B79535;
+  --secondary: #222;
+  --border: #ddd;
+  --white: #fff;
+  --black: #000;
+  --bgLight: #F5F5F5;
+
+  /* Breakpoints */
+  --xs: 360px;
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+  --xxxl: 1600px;
+
+  --gutter: 1rem;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+  /* display: block; */
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: calc(var(--sm) - calc(var(--gutter) * 2));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: calc(var(--md) - calc(var(--gutter) * 2));
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: calc(var(--lg) - calc(var(--gutter) * 2));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: calc(var(--xl) - calc(var(--gutter) * 2));
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: calc(var(--xxl) - calc(var(--gutter) * 2));
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: calc(var(--xxxl) - calc(var(--gutter) * 2));
+  }
+}
+
+.container--fluid {
+  width: 100%;
+}
+
+.easeTime {
+  transition-duration: 500ms;
+}
+
+/* Transitions */
+.linkTransitions {
+  transition: color var(--easeTime) ease, background-color var(--easeTime) ease;
+}
