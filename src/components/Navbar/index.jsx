@@ -27,30 +27,22 @@ const Navbar = () => {
       <div className="navbar">
         <div className="container">
           <div className="logo">
-            <img src="logo-black.svg" alt="" />
+            <img src="./img/logo-black.svg" alt="" />
           </div>
           <div className="nav-links">
             <div className="links">
               <NavLink to={"/"} className="link-item large">
-                <p>
-                  Dashboard
-                  </p>
+                <p>Dashboard</p>
               </NavLink>
               <NavLink to={"/my-favourites"} className="link-item large">
-              <p>
-                My Favourites
-              </p>
+                <p>My Favourites</p>
               </NavLink>
               <NavLink to={"/upcoming-events"} className="link-item large">
-              <p>
-                Upcoming Events
-              </p>
+                <p>Upcoming Events</p>
               </NavLink>
             </div>
             <div className="icons">
-              <div
-                className="bell"
-              >
+              <div className="bell">
                 <svg
                   width="20"
                   height="20"
@@ -65,7 +57,6 @@ const Navbar = () => {
 
                   <circle cx="18" cy="6" r="3" fill="#B79535" />
                 </svg>
-                
               </div>
               <div
                 className="menu"
@@ -170,9 +161,9 @@ const Navbar = () => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="#B79535"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
@@ -186,8 +177,17 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <Outlet></Outlet>
+      <div className="footer">
+        <div className="container">
+        <p>Copyright © Neom Sindalah. All Rights Reserved.</p>
+        <div>
+          <Link to={"#"} className="footer-links">Terms of Use</Link>
+          <Link to={"#"} className="footer-links">Privacy</Link>
+          <Link to={"#"} className="footer-links">Cookie</Link>
+        </div>
+        </div>
+      </div>
     </>
   );
 };

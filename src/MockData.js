@@ -1116,4 +1116,4 @@ const Profile = [
 ]
 
 
-export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail, RecommendationBannerData};
+export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail, RecommendationBannerData, SliderCardData};

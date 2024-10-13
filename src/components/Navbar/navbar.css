@@ -31,20 +31,22 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .links {
   display: flex;
   gap: 1rem;
-  position: relative; /* Ensure that the link's parent div is relative */
+  position: relative;
+  font-weight: 600;
+  font-family: "brownlight", sans-serif;
 }
 
 .link-item {
   text-decoration: none;
   color: black;
   transition: color 0.5s ease-in-out;
-  position: relative; /* So that the pseudo element is placed relative to this */
+  position: relative;
 }
 
 .links .link-item::after {
@@ -111,6 +113,7 @@
   width: 20px;
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
+  font-family: "Ivy Mode",sans-serif;
 }
 
 .menu-icon svg rect {
@@ -152,6 +155,7 @@
     transition: all 0.5s ease-in-out;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    font-family: "Brown", sans-serif;
   }
   .link-item:hover {
     color: var(--primary);
@@ -190,12 +194,62 @@
   position: absolute;
 }
 
-@media screen and (max-width: 1200px) {
+.footer {
+  background-color: var(--secondary);
+  color: white;
+  font-family: "Brown", sans-serif !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  padding: 2rem 0;
+  div {
+    display: flex; 
+    gap: 1rem;
+  }
+}
+
+.footer-links {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-links:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+  .links {
+    font-size: small;
+  }
+  .dropdown .link-item {
+    font-size: small;
+  }
+  .prof-dropdown {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .large {
     display: none;
   }
   .mobile {
     display: block;
+  }
+  .logo {
+    img {
+      width: 60px;
+    }
+  }
+  .footer .container {
+    font-size: smaller;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
