@@ -22,13 +22,18 @@ const data = [
 
 const Settings = () => {
     const [toggle, setToggle] = useState(false);
+    const [selected, setSelected] = useState("english");
+
+    const handleChange = (val) => {
+      setSelected(val); 
+    };
 
   return (
     <>
       <div className="settings">
         <div className="container">
           <div className="heading">
-            <h1>Good Morning Charlie!</h1>
+            <h1>Good morning Charlie!</h1>
             <p>
               You can change the settings for your personal data and other
               information.
@@ -56,7 +61,7 @@ const Settings = () => {
                 <h3>Notifications</h3>
                 <p>Which type of notifications would you like to receive?</p>
               </div>
-              <div className="others-item__options">
+              <div className="others-item__options notif">
                 <div className="option">
                   <div>
                     <label className="switch">
@@ -103,32 +108,38 @@ const Settings = () => {
                   diam nonumy eirmod?
                 </p>
               </div>
-              <div className="others-item__options">
-                <div className="option">
-                  {/* <div>
-                    <label className="switch">
-                      <input
-                        type="checkbox"
-                        onClick={() => setToggle(!toggle)}
-                      />
-                      <span className="slider round"></span>
-                    </label>
-                  </div> */}
-                  <div className="radio">
-                    <input type="radio" name="radio"/>
-                  </div>
+              <div className="others-item__options lang">
+                <div className="option" onClick={() => handleChange("english")}>
+                  <label className="radio">
+                    <input
+                      type="radio"
+                      name="radio"
+                      checked={selected == "english"}
+                    />
+                    <span className="checkmark"></span>
+                  </label>
                   <span>English</span>
                 </div>
-                <div className="option">
-                  <div className="radio">
-                    <input type="radio" name="radio"/>
-                  </div>
+                <div className="option" onClick={() => handleChange("french")}>
+                  <label className="radio">
+                    <input
+                      type="radio"
+                      name="radio"
+                      checked={selected == "french"}
+                    />
+                    <span className="checkmark"></span>
+                  </label>
                   <span>French</span>
                 </div>
-                <div className="option">
-                  <div className="radio">
-                    <input type="radio" name="radio"/>
-                  </div>
+                <div className="option" onClick={() => handleChange("arabic")}>
+                  <label className="radio">
+                    <input
+                      type="radio"
+                      name="radio"
+                      checked={selected == "arabic"}
+                    />
+                    <span className="checkmark"></span>
+                  </label>
                   <span>Arabic</span>
                 </div>
               </div>
