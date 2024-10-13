@@ -149,7 +149,7 @@ const Navbar = () => {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
-                        color: "#B79535",
+                        color: "#FF385C",
                       }}
                       className="link-item"
                     >
@@ -160,7 +160,7 @@ const Navbar = () => {
                         height="15"
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="#B79535"
+                        stroke="#FF385C"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -180,12 +180,18 @@ const Navbar = () => {
       <Outlet></Outlet>
       <div className="footer">
         <div className="container">
-        <p>Copyright © Neom Sindalah. All Rights Reserved.</p>
-        <div>
-          <Link to={"#"} className="footer-links">Terms of Use</Link>
-          <Link to={"#"} className="footer-links">Privacy</Link>
-          <Link to={"#"} className="footer-links">Cookie</Link>
-        </div>
+          <p>Copyright © Neom Sindalah. All Rights Reserved.</p>
+          <div>
+            <Link to={"#"} className="footer-links">
+              Terms of Use
+            </Link>
+            <Link to={"#"} className="footer-links">
+              Privacy
+            </Link>
+            <Link to={"#"} className="footer-links">
+              Cookie
+            </Link>
+          </div>
         </div>
       </div>
     </>

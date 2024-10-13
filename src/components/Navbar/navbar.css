@@ -61,7 +61,7 @@
 }
 
 .links .link-item:hover {
-  color: #b79535;
+  color: var(--primary);
 }
 
 .links .link-item:hover::after {
@@ -70,7 +70,7 @@
 }
 
 .links .active {
-  color: #b79535;
+  color: var(--primary);
 }
 
 .links .active::after {
@@ -107,7 +107,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary);
+  background-color: var(--highlight);
   color: #fff;
   height: 20px;
   width: 20px;
@@ -159,7 +159,7 @@
   }
   .link-item:hover {
     color: var(--primary);
-    background-color: #b7943512;
+    background-color: #ff385d0e;
   }
 }
 

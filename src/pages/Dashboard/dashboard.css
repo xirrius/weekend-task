@@ -1,0 +1,58 @@
+.dashboard{
+    margin: 3rem 1rem;
+}
+.dashboard .content {
+    
+}
+
+.dashboard .content .carousel-heading {
+    font-size: clamp(30px, 3vw, 36px);
+    margin-bottom: 1.25rem;
+    font-family: "Ivy Mode", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.dashboard .content .carousel-desc {
+    font-family: "brownlight",sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    line-height: 1.8rem;
+}
+
+@media screen and (min-width: 576px) {
+  .dashboard .content {
+    margin-left: calc((100% - calc(var(--sm) - calc(var(--gutter) * 2))) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard .content {
+    margin-left: calc((100% - calc(var(--md) - calc(var(--gutter) * 2))) / 2);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .dashboard .content {
+    margin-left: calc((100% - calc(var(--lg) - calc(var(--gutter) * 2))) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard .content {
+    margin-left: calc((100% - calc(var(--xl) - calc(var(--gutter) * 2))) / 2);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .dashboard .content {
+    margin-left: calc((100% - calc(var(--xxl) - calc(var(--gutter) * 2))) / 2);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .dashboard .content {
+    margin-left: calc((100% - calc(var(--xxxl) - calc(var(--gutter) * 2))) / 2);
+  }
+}

@@ -6,6 +6,7 @@ import UpcomingEvents from "./pages/UpcomingEvents";
 import Settings from "./pages/Settings";
 import EditProfile from "./pages/EditProfile";
 import Feedback from "./pages/Feedback";
+import "swiper/css";
 
 const App = () => {
   return (
