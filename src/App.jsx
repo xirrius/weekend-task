@@ -7,6 +7,7 @@ import Settings from "./pages/Settings";
 import EditProfile from "./pages/EditProfile";
 import Feedback from "./pages/Feedback";
 import "swiper/css";
+import EventDetails from "./pages/EventDetails/EventDetails";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/feedback" Component={Feedback}></Route>
             <Route path="/settings" Component={Settings}></Route>
             <Route path="/edit-profile" Component={EditProfile}></Route>
+            <Route path="/event-details/:id" Component={EventDetails}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,6 +1,7 @@
+import { useState } from "react";
 import "./edit-profile.css";
 
-const data = [
+const info = [
   {
     id: 1,
     name: "Golf",
@@ -70,10 +71,17 @@ const data = [
 ];
 
 const EditProfile = () => {
+  const [data, setData] = useState(info);
 
-  const handleLike = () => {
-    
-  }
+  const handleLike = (id) => {
+    const updatedData = data.map((item) => {
+      if (item.id === id) {
+        return { ...item, isLiked: !item.isLiked }; // Toggle isLiked
+      }
+      return item;
+    });
+    setData(updatedData); // Update state to trigger re-render
+  };
 
   return (
     <div className="edit-profile">
@@ -84,8 +92,8 @@ const EditProfile = () => {
             <img src="./img/music.png" alt="" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="27.232"
-              height="26"
+              width="16"
+              height="24"
               viewBox="0 0 27.232 26"
             >
               <g
@@ -121,69 +129,84 @@ const EditProfile = () => {
           <div className="edit__list">
             <div className="form__group">
               <label className="form__label">What should we call you?</label>
-              <input
-                type="text"
-                className="form__input"
-                defaultValue="Charlie"
-              />
+              <div className="edit__input">
+                <input
+                  type="text"
+                  className="form__input"
+                  defaultValue="Charlie"
+                />
+              </div>
             </div>
             <div className="form__group">
               <label className="form__label">
                 What&apos;s your email address?
               </label>
-              <input
-                type="email"
-                className="form__input"
-                placeholder=""
-                defaultValue="Charlie.mathwe@gmail.com"
-              />
+              <div className="edit__input">
+                <input
+                  type="email"
+                  className="form__input"
+                  placeholder=""
+                  defaultValue="Charlie.mathwe@gmail.com"
+                />
+              </div>
             </div>
             <div className="form__group">
               <label className="form__label">
                 On which number can we contact you?
               </label>
-              <input
-                type="tel"
-                className="form__input"
-                defaultValue="9971 87 7676"
-              />
+              <div className="edit__input">
+                <input
+                  type="tel"
+                  className="form__input"
+                  defaultValue="9971 87 7676"
+                />
+              </div>
             </div>
             <div className="form__group">
               <label className="form__label">
                 When can we wish a happy birthday?
               </label>
-              <input
-                type="date"
-                className="form__input"
-                placeholder=""
-                defaultValue="1979-01-08"
-              />
+              <div className="edit__input">
+                <input
+                  type="date"
+                  className="form__input"
+                  placeholder=""
+                  defaultValue="1979-01-08"
+                />
+              </div>
             </div>
             <ul className="activity__list">
               {data.map((item) => (
-              <li className="activity__list--item" key={item.id} onClick={() => handleLike(item.id)}>
-                <div className="activity__info">
-                  <div className="activity__image">
-                    <img src={item.img} alt="activity" />
-                    <div className="activity__image--overlay"></div>
-                    <div className="activity__name">{item.name}</div>
+                <li
+                  className="activity__list--item"
+                  key={item.id}
+                  onClick={() => handleLike(item.id)}
+                >
+                  <div className="activity__info">
+                    <div className="activity__image">
+                      <img
+                        src={item.img}
+                        alt="activity"
+                        className={`${item.isLiked ? "darker" : ""}`}
+                      />
+                      <div className="activity__name">{item.name}</div>
+                      {item.isLiked && <div className="icon-thumbs-up"></div>}
+                    </div>
                   </div>
-                  {item.isLiked && <div className="activity__selected">
-                    <div className="icon-thumbs-up"></div>
-                  </div>}
-                </div>
-              </li>
+                </li>
               ))}
             </ul>
             <div className="form__group m-0">
               <label className="form__label">
                 Please let us know if you have some interests
               </label>
-              <input
-                type="text"
-                className="form__input"
-                placeholder="Add multiple interests comma ( , ) separated"
-              />
+              <div className="edit__input">
+                <input
+                  type="text"
+                  className="form__input"
+                  placeholder="Add multiple interests comma ( , ) separated"
+                />
+              </div>
             </div>
             <div className="btn--wrap">
               <button className="btn btn__red">Save</button>
