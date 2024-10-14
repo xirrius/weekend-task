@@ -1,0 +1,562 @@
+.upcoming-events {
+  padding: 2rem 1rem;
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.upcoming-events__heading {
+  font-family: "Ivy Mode", sans-serif;
+  h1 {
+    font-size: clamp(30px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #222;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "brownlight", sans-serif;
+}
+
+.filters .row-1 {
+  display: flex;
+  gap: 1.5rem;
+  div > p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.filter__schedules {
+  display: flex;
+  flex-direction: column;
+  .schedules__input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.filter__travel {
+  display: flex;
+  flex-direction: column;
+  .travel__input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    .travel__walk,
+    .travel__drive {
+      overflow: hidden;
+      border-radius: 999px;
+      border: 1px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 330px;
+      height: 45px;
+      span {
+        height: 100%;
+        align-content: center;
+        border-right: 1px solid #222;
+        padding: 0.25rem 1rem;
+      }
+      span:last-child {
+        border-right: none;
+      }
+    }
+    .travel__no-limits {
+      border-radius: 999px;
+      border: 1px solid #222;
+      height: 45px;
+      padding: 0 1rem;
+      align-content: center;
+    }
+  }
+}
+
+.filters .row-2 {
+  p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 1.25rem;
+  }
+  .filter__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: start;
+    .filter__category {
+      border: 1px solid black;
+      border-radius: 999px;
+      padding: 1rem;
+    }
+  }
+}
+
+.filters.small,
+.filter-btn {
+  display: none;
+}
+
+.input__date,
+.input__location {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+  gap: 1.5rem;
+  cursor: pointer;
+  height: 45px;
+  input {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    background-color: transparent;
+    position: relative;
+    font-family: "brownlight", sans-serif;
+  }
+}
+
+.input__date {
+  flex: 0.3;
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+}
+
+.input__location {
+  width: 16rem;
+}
+
+.input__date:hover,
+.input__date:focus,
+.input__date:focus-within,
+.input__location:hover,
+.input__location:focus,
+.input__location:focus-within {
+  border-color: var(--primary);
+}
+
+.filter__categories .filter__category,
+.filter__travel .travel__drive span,
+.travel__no-limits,
+.travel__walk span {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.filter__categories .filter__category:hover,
+.filter__travel .travel__drive span:hover,
+.travel__no-limits:hover,
+.travel__walk span:hover {
+  color: white;
+  background-color: black;
+}
+
+.filters .active {
+  background-color: black;
+  color: white;
+}
+
+.filter-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-family: "brownlight", sans-serif;
+  font-size: 1.1rem;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary);
+}
+
+.filters.small {
+  position: absolute;
+  width: 100%;
+  min-height: 91.7vh;
+  background-color: white;
+  top: 5rem;
+  left: 0;
+  /* overflow: scroll; */
+  z-index: 102;
+  padding: 1rem;
+  padding-bottom: 6rem;
+  .small-heading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 2rem 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    div {
+      cursor: pointer;
+    }
+  }
+  .filters-apply {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    button {
+      width: 100%;
+      padding: 1rem 0;
+      border: 1px solid black;
+      outline: none;
+      color: white;
+      background-color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "brownlight", sans-serif;
+      font-size: 1.1rem;
+      transition: all 0.5s ease-in-out;
+    }
+    button:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.event-cards__container {
+  margin: 3.5rem 0 2rem 0;
+  gap: 2.5rem 1rem;
+  .event-cards__card {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    position: relative;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .events__card-img {
+      width: 100%;
+      flex: 0.8;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      svg {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        fill: rgba(68, 68, 68, 0.445);
+        stroke: rgb(65, 65, 65);
+        stroke-width: 1px;
+        transition: all 0.5s ease-in-out;
+      }
+      svg:hover {
+        fill: #ff385c;
+        stroke: #ff385c;
+      }
+    }
+}
+.event-cards__card:hover {
+  .events__card-img {
+    transform: translateY(-8px);
+    box-shadow: 0px 3px 16px #00000024;
+  }
+}
+  .events__card-content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Brown", sans-serif;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex: 0.2;
+    .events-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      .events-info__vibe {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        img {
+          width: 20px;
+        }
+      }
+    }
+    .event__name {
+      font-family: "Ivy Mode", sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+    .events-info__date, .event__time {
+        color: rgb(143, 143, 143) ;
+    }
+  }
+}
+
+.liked {
+    fill: #FF385C !important;
+    stroke: #ff385c !important;
+}
+
+.event-cards__container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.load_btn {
+    margin: 0rem auto 2rem auto;
+    padding: 1rem 2rem;
+    font-family: "brownlight", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1.19px;
+    color: white;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.load_btn:hover {
+    background-color: var(--primary);
+}
+
+@media screen and (min-width: 576px) {
+  .event-cards__container {
+    grid-template-columns: repeat(1, 1fr);
+    .event-cards__card {
+      height: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .event-cards__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .event-cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    .event-cards__card {
+      column-gap: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .event-cards__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .event-cards__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .event-cards__container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .filters .filter__schedules .schedules__input .input__location {
+    width: 13rem;
+  }
+  .filters .row-1 {
+    .filter__travel .travel__input .travel__drive,
+    .travel__walk {
+      width: 290px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .filters .row-1 {
+    flex-direction: column;
+    .filter__schedules {
+      width: 100%;
+      .schedules__input {
+        justify-content: space-between;
+        .input__date {
+          width: 40%;
+          flex: unset;
+        }
+        .input__location {
+          width: 50%;
+        }
+      }
+    }
+    .filter__travel {
+      width: 100%;
+      .travel__input {
+        .travel__drive,
+        .travel__no-limits,
+        .travel__walk {
+          width: unset !important;
+          height: unset !important;
+          span {
+            padding: 1rem;
+          }
+        }
+        .travel__no-limits {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .filters .filter__travel .travel__input {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 992px) {
+  .filters .filter__travel .travel__input {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filters.large {
+    display: none;
+  }
+  .filters.small {
+    display: flex;
+  }
+  .filter-btn {
+    display: block;
+  }
+  .filters .filter__schedules .schedules__input,
+  .filter__travel .travel__input {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .filters .filter__schedules .schedules__input > div {
+    width: 100% !important;
+    input {
+      width: 100%;
+    }
+  }
+  .filters .row-1 .filter__travel .travel__input .travel__drive,
+  .filters .row-1 .filter__travel .travel__input .travel__no-limits,
+  .filters .row-1 .filter__travel .travel__input .travel__walk {
+    width: 100% !important;
+    span {
+      flex: 1;
+      height: 100%;
+    }
+  }
+  .filters .row-2 .filter__categories .filter__category {
+    width: 48%;
+    text-align: center;
+  }
+  .event-cards__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .event-cards__card {
+      width: 100%;
+      height: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .filters .row-2 .filter__categories .filter__category {
+    width: 100%;
+    text-align: center;
+  }
+  .filters .row-1 .filter__travel .travel__input .travel__drive span,
+  .filters .row-1 .filter__travel .travel__input .travel__no-limits,
+  .filters .row-1 .filter__travel .travel__input .travel__walk span {
+    padding: 0.6rem;
+  }
+  .event-cards__container
+    .event-cards__card
+    .events__card-content
+    .events-info {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+}
+
+.event-show-dropdown {
+  animation: eventSlideDown 0.5s ease-in-out forwards;
+}
+
+.event-hide-dropdown {
+  animation: eventSlideUp 0.5s ease-in-out forwards;
+}
+
+@keyframes eventSlideDown {
+  0% {
+    top: 6rem;
+    opacity: 0;
+  }
+  100% {
+    top: 5rem;
+    opacity: 1;
+  }
+}
+@keyframes eventSlideUp {
+  0% {
+    top: 5rem;
+    opacity: 1;
+  }
+  100% {
+    top: 6rem;
+    opacity: 0;
+  }
+}
