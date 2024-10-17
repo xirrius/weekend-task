@@ -1,0 +1,27 @@
+.Remove_card {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .Remove_main {
+    position: relative; 
+    margin: 5px; 
+  }
+  
+  .Remove_main button {
+    position: absolute; 
+    top: 2.5rem;
+    right: .7rem; 
+    z-index: 1; 
+    background-color:white; 
+    color: #ff4d4d; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    border-radius: 15px; 
+  }
+  
+  .Remove_main button:hover {
+    background-color: brown; 
+  }
+  

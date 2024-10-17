@@ -1,0 +1,10 @@
+.Rc_card {
+    display: flex;                /* Use flexbox to arrange items in a row */
+    flex-direction: row;         /* Set the direction to row */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: flex-start;     /* Align items to the top */
+    overflow-x: auto;            /* Allow horizontal scrolling if needed */
+    /* padding: 10px;               Add padding around the container */
+  }
+  
+  

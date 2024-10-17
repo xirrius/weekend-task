@@ -1,0 +1,109 @@
+.newSlide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.img_Sx {
+  height: 600px;
+  width: 100%;
+}
+
+.img_Sx img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 1.5s ease-in-out;
+}
+
+.newSlide:hover .img_Sx img{
+  transform: scale(1.18);
+}
+
+.txt_Sx {
+  background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem 3rem;
+  color: white;
+  text-align: left;
+  font-family: "brownlight", sans-serif;
+  width: 100%;
+}
+.txt_Sx h1 {
+  text-align: left;
+  font-family: "Ivy Mode", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.19px;
+  margin-bottom: 1rem;
+}
+.txt_Sx p {
+  text-align: left;
+  letter-spacing: 0.25px;
+}
+.txt_Sx2{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  bottom: 1rem;
+  right: 1rem;
+  img {
+    width: 24px;
+  }
+}
+.txt_Sx2 p{
+  text-align: left;
+  font-family: "Brown", sans-serif;
+}
+
+.Sx_txt_detail {
+  margin-top: 0.3rem; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .img_Sx {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .txt_Sx h1 {
+    font-size: 1.5rem;
+  }
+  .txt_Sx {
+    padding: 1.5rem;
+  }
+  .img_Sx {
+    height: 400px;
+  }
+  .txt_Sx p {
+    font-size: 0.9rem;
+  }
+  .txt_Sx2 p{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Sx_txt_detail {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.2rem;
+  }
+  .img_Sx {
+    height: 360px;
+  }
+  .txt_Sx h1 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 476px) {
+  .img_Sx {
+    height: 320px;
+  }
+}
+
+

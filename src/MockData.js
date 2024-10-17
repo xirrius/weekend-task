@@ -178,7 +178,7 @@ const RecommendationBannerData = [
   {
     Event_ID: 10005,
     Operator_ID: 20002,
-    url: "./img/Product1.png",
+    url: "./img/Event-Banner.png",
     Operator_Name: "Dark Roast",
     Event_Category: "Golf",
     Event_Name: "Round of Golf",
@@ -207,7 +207,7 @@ const RecommendationBannerData = [
   {
     Event_ID: 10012,
     Operator_ID: 20005,
-    url: "./img/Product1.png",
+    url: "./img/holiday_0.png",
     Operator_Name: "Basket of gold",
     Event_Category: "Tech Expo",
     Event_Name: "Tech Expo",
@@ -238,7 +238,7 @@ const RecommendationBannerData = [
   {
     Event_ID: 10013,
     Operator_ID: 20003,
-    url: "./img/Product1.png",
+    url: "./img/spa_0.png",
     Operator_Name: "Basket of gold",
     Event_Category: "Surfing",
     Event_Name: "Surfing",
@@ -262,7 +262,7 @@ const RecommendationBannerData = [
   {
     Event_ID: 10013,
     Operator_ID: 20003,
-    url: "./img/Product1.png",
+    url: "./img/cusine_0.png",
     Operator_Name: "Basket of gold",
     Event_Category: "Carnival",
     Event_Name: "Carnival",
@@ -286,7 +286,7 @@ const RecommendationBannerData = [
   {
     Event_ID: 10013,
     Operator_ID: 20005,
-    url: "./img/Product1.png",
+    url: "./img/spa_0.png",
     Operator_Name: "Basket of gold",
     Event_Category: "Jazz Concert",
     Event_Name: "Jazz Concert",
@@ -358,7 +358,7 @@ const EventDetail = [
     Event_Description:
       "Most awaited concert featuring a spectacular line-up of Grammy-nominated musicians from across the world coming together to create some fine Tech Expo.",
     Event_Start_Date: "Dec 11, 2022",
-    Event_End_Date: "Dec 11, 2022",
+    Event_End_Date: "Dec 12, 2022",
     Event_Start_Time: "3:00 PM",
     Event_End_Time: "11:59 PM",
     Seat_Booking_Availability: 20,
@@ -422,7 +422,7 @@ const EventDetail = [
     Event_Description:
       "The course will test even the most seasoned golfer due to cunning bunker design and water hazards that affect twelve of the eighteen holes...",
     Event_Start_Date: "Dec 11, 2022",
-    Event_End_Date: "Dec 11, 2022",
+    Event_End_Date: "Dec 13, 2022",
     Event_Start_Time: "3:00 PM",
     Event_End_Time: "4:00 PM",
     Seat_Booking_Availability: 20,
@@ -521,7 +521,7 @@ const EventDetail = [
     Event_Description:
       "Enjoy new dishes made from weekly air-flown ingredients from Mediterranean Sea...",
     Event_Start_Date: "Dec 11, 2022",
-    Event_End_Date: "Dec 11, 2022",
+    Event_End_Date: "Dec 12, 2022",
     Event_Start_Time: "6:30 PM",
     Event_End_Time: "9:00 PM",
     Seat_Booking_Availability: 20,
@@ -597,7 +597,6 @@ const EventDetail = [
       { img: "Dinning-5.jpg" },
     ],
   },
-
   {
     Event_ID: 10104,
     itinerary: true,
@@ -609,7 +608,7 @@ const EventDetail = [
     Event_Description:
       "The course will test even the most seasoned golfer due to cunning bunker design and water hazards that affect twelve of the eighteen holes...",
     Event_Start_Date: "Dec 13, 2022",
-    Event_End_Date: "Dec 13, 2022",
+    Event_End_Date: "Dec 14, 2022",
     Event_Start_Time: "4:30 PM",
     Event_End_Time: "5:30 PM",
     Seat_Booking_Availability: 20,
@@ -2325,6 +2324,7 @@ const charliData = [
     date: "Nov 10-29",
     status: "Yes, I accept",
     notice: "No, thanks",
+    rating: 4,
   },
   {
     img: "./img/holiday_0.png",
@@ -2334,6 +2334,7 @@ const charliData = [
     date: "Nov 10-29",
     status: "Yes, I accept",
     notice: "No, thanks",
+    rating: 1,
   },
   {
     img: "./img/cusine_0.png",
@@ -2343,6 +2344,7 @@ const charliData = [
     date: "Nov 10-29",
     status: "Yes, I accept",
     notice: "No, thanks",
+    rating: 3,
   },
   {
     img: "./img/rolce.png",
@@ -2352,6 +2354,7 @@ const charliData = [
     date: "Nov 10-29",
     status: "Yes, I accept",
     notice: "No, thanks",
+    rating: 4,
   },
 ];
 

@@ -1,0 +1,28 @@
+.num_card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between cards */
+}
+
+.num_main {
+  position: relative;
+}
+
+.main_num {
+  width: 100%;
+}
+
+.numimg {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.icon_main {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  z-index: 1;
+  color: #4e524f;
+}
